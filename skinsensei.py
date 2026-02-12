@@ -5,6 +5,17 @@ from PIL import Image
 import pandas as pd
 import plotly.graph_objects as go
 from datetime import datetime
+import streamlit as st
+from PIL import Image
+
+# โหลดรูปภาพจากในโฟลเดอร์
+icon_image = Image.open("logo.png")
+
+st.set_page_config(
+    page_title="SkinSensei",
+    page_icon=icon_image, # ใช้ตัวแปรที่เก็บรูปภาพ
+    layout="centered"
+)
 
 # ตั้งค่าหน้าเว็บ
 st.set_page_config(page_title="SkinSensei", page_icon="🧴")
