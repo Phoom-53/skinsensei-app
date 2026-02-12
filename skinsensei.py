@@ -5,23 +5,6 @@ from PIL import Image
 import pandas as pd
 import plotly.graph_objects as go
 from datetime import datetime
-import streamlit as st
-from PIL import Image
-
-# 1. โหลดรูปภาพจากไฟล์ที่คุณอัพโหลดขึ้นไป
-logo = Image.open("logo.png") 
-
-# 2. เอาไปใส่ใน Page Config (ไอคอนเล็กๆ บนแถบเว็บ)
-st.set_page_config(
-    page_title="SkinSensei",
-    page_icon=logo, 
-    layout="centered"
-)
-# อยากโชว์รูปตรงไหน ให้พิมพ์คำสั่งนี้
-st.image("my-logo.png", caption="โลโก้ของ SkinSensei", width=200)
-
-# ตั้งค่าหน้าเว็บ
-st.set_page_config(page_title="SkinSensei", page_icon="🧴")
 
 # ระบบจำลองฐานข้อมูล
 if 'history' not in st.session_state:
@@ -65,4 +48,5 @@ elif menu == "SkinDiary (ประวัติ)":
 elif menu == "คำแนะนำ":
     st.title("💡 เคล็ดลับดูแลผิว")
     st.info("🍎 ทานวิตามิน C และ Zinc | 😴 นอนให้ครบ 8 ชม. | 🧴 ทากันแดดทุกวัน")
+
 
